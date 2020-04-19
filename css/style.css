@@ -1,0 +1,183 @@
+:root {
+    --dunkel: #040C3D;
+    --hell: white;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: var(--dunkel);
+    color: var(--hell);
+}
+
+a {
+    color: inherit;
+}
+
+header {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.header-image{
+    width: 100%;
+    max-width: 320px;
+}
+
+.insta-logo {
+    width: 100%;
+    max-width: 100px;
+}
+
+section {
+    display: block;
+    margin: 0;
+}
+
+.hell::before,
+.dunkel::before {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.hell {
+    background: var(--hell);
+    color: var(--dunkel);
+}
+
+.hell::before {
+    content: url("/images/trenner_dunkel.svg");
+}
+
+.hell .description {
+    text-align: left;
+}
+
+.dunkel {
+    background: var(--dunkel);
+    color: var(--hell);
+}
+
+.dunkel::before {
+    content: url("/images/trenner_hell.svg");
+}
+
+.dunkel .description {
+    text-align: right;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+
+.post-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hell .post-container {
+    grid-template-areas: "image description";
+}
+
+.dunkel .post-container {
+    grid-template-areas: "description image";
+}
+
+.image {
+    grid-area: image;
+    align-self: center;
+}
+
+.hell .image {
+    border: 10px solid var(--dunkel);
+}
+
+.description {
+    grid-area: description;
+    align-self: center;
+}
+
+.trenner {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.dunkel .image {
+    border: 10px solid var(--hell);
+}
+
+
+.image {
+    display: block;
+    width: 100%;
+}
+
+
+.impressum {
+    text-align: center;
+    padding: 20px 30px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+
+    border: 1px solid var(--hell);
+
+    transition: all 0.3s ease;
+
+    vertical-align: middle;
+}
+
+.dunkel .button {
+    border: 1px solid var(--hell);
+}
+
+.dunkel .button:hover {
+    background: var(--hell);
+    color: var(--dunkel);
+}
+
+.hell .button {
+    border: 1px solid var(--dunkel);
+}
+
+.hell .button:hover {
+    background: var(--dunkel);
+    color: var(--hell);
+}
+
+.ion-icon {
+    font-size: inherit;
+}
+
+@media (max-width: 600px) {
+    .post-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hell .post-container,
+    .dunkel .post-container{
+        grid-template-areas: "image" 
+                             "description";
+    }
+}
