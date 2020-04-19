@@ -1,7 +1,6 @@
 title: odermalso
 description: "odermalso ist ein kreatives Kollektiv von hoffnungsvollen Menschen auf der Suche nach ehrlichen Worten und ungehörten Klängen."
-baseurl: "/odermalso/"
-# baseurl: ""
+baseurl: ""
 url: "http://odermalso.de"
 
 exclude: ["exclude"]
