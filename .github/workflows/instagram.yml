@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Download Instagram
-        uses: konstantinkobs/jekyll-instagram-github-action@v1.0.3
+        uses: konstantinkobs/jekyll-instagram-github-action@v1.0.4
         with:
           account-name: odermalso
           output-path: _data/instagram.yml
