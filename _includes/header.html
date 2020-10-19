@@ -14,11 +14,26 @@
         <title>{{ site.title }}</title>
     </head>
     <body>
+        <div class="website-container">
+            <header>
+                <div class="header-background"></div>
 
-        <header>
-            <img class="header-image" src="{{ site.baseurl }}/images/logo.jpg" alt="{{ site.title }}">
-            <p class="subtitle">„{{ site.description }}“</p>
-            <a class="button" href="https://www.instagram.com/odermalso/"><i class="ri-instagram-line"></i> Instagram</a>
-            <a class="button" href="https://www.youtube.com/channel/UCzGr5YD4VlWiAeMT-J01lkQ"><i class="ri-youtube-line"></i> YouTube</a>
-            <a class="button" href="https://open.spotify.com/artist/1WqyBx5oVGAhAG9N4l5GqS?si=Z1jOIfPbQI6qPRlARpPK2A"><i class="ri-spotify-line"></i> Spotify</a>
-        </header>
+                <div class="header-image-container">
+                    <img class="header-image" src="{{ site.baseurl }}/images/logo.jpg" alt="{{ site.title }}">
+                </div>
+                <div class="header-description">
+                    <p class="subtitle">„{{ site.description }}“</p>
+                    <div class="buttons">
+                        <a class="button" href="https://www.instagram.com/odermalso/"><i class="ri-instagram-line"></i> Instagram</a>
+                        <a class="button" href="https://www.youtube.com/channel/UCzGr5YD4VlWiAeMT-J01lkQ"><i class="ri-youtube-line"></i> YouTube</a>
+                        <a class="button" href="https://open.spotify.com/artist/1WqyBx5oVGAhAG9N4l5GqS?si=Z1jOIfPbQI6qPRlARpPK2A"><i class="ri-spotify-line"></i> Spotify</a>
+                    </div>
+                </div>
+
+
+                <footer class="impressum">
+                    ©{{ "now" | date: "%Y" }} — <a href="{% link impressum.md %}">Impressum</a>
+                </footer>
+            </header>
+
+            <div class="content">
