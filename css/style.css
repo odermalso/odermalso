@@ -60,6 +60,14 @@ footer {
     margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+    .subtitle {
+        font-size: 1.5rem;
+        padding: 0.2rem 0.8rem;
+        line-height: 2.4rem;
+    }
+}
+
 .buttons {
     margin: 2rem 0;
 }
